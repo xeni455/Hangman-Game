@@ -43,10 +43,14 @@ div {
 .supra {
     font-size: xx-large;
 }
-#video {
-width: 1px;
-}
+
+
 #pic {
+    width: 1px;
     padding: 0;
+    margin: 0;
     opacity: 0.7;
+}
+#video {
+    width: 100%;
 }
