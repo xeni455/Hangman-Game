@@ -1,11 +1,11 @@
 // array of items to be guessed
 const musicalBands = {
-    queen: '<iframe width="560" height="315" src="https://www.youtube.com/embed/FGcgkD9OURk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
-    korn: '<iframe width="560" height="315" src="https://www.youtube.com/embed/uAq6RjSuwXQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
-    "shakira": '<iframe width="560" height="315" src="https://www.youtube.com/embed/6Mgqbai3fKo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
-    "three doors down": '<iframe width="560" height="315" src="https://www.youtube.com/embed/kPBzTxZQG5Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
-    "rolling stones": '<iframe width="560" height="315" src="https://www.youtube.com/embed/BinwuzZVjnE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
-    "portugal the man": '<iframe width="560" height="315" src="https://www.youtube.com/embed/pBkHHoOIIn8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+    queen: '<iframe class="embed-responsive-item" width="420" height="345" src="https://www.youtube.com/embed/FGcgkD9OURk"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+    korn: '<iframe class="embed-responsive-item" width="420" height="345" src="https://www.youtube.com/embed/uAq6RjSuwXQ" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+    "shakira": '<iframe class="embed-responsive-item" width="420" height="345" src="https://www.youtube.com/embed/6Mgqbai3fKo"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+    "three doors down": '<iframe class="embed-responsive-item" width="420" height="345" src="https://www.youtube.com/embed/kPBzTxZQG5Q"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+    "rolling stones": '<iframe class="embed-responsive-item" width="420" height="345" src="https://www.youtube.com/embed/BinwuzZVjnE" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+    "portugal the man": '<iframe class="embed-responsive-item" width="420" height="345" src="https://www.youtube.com/embed/pBkHHoOIIn8" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
 };
 // empty array to hold the name in uderscores
 let underArr = [];
@@ -18,6 +18,15 @@ let swtc = false;
 let counter = 15;
 
 let wins = 0;
+// let snd1 = new Audio('../sounds/253177__suntemple__retro-accomplished-sfx.wav');
+// let snd2 = new Audio('../sounds/274180__littlerobotsoundfactory__jingle-win-synth-00.wav')
+
+// function play1(){
+//     snd1.play();
+// }
+// function play2(){
+//     snd2.play();
+//}
 let obj = {
     underFunction() {
         for (let i = 0; i < rdm.length; i++) {
@@ -30,7 +39,6 @@ let obj = {
         }
     },
     startFunction() {
-
         let undArr = underArr.join(" ")
         document.getElementById("bandName").innerHTML = undArr;
         swtc = true;
@@ -52,6 +60,7 @@ let obj = {
         for (let j = 0; j < rdm.length; j++) {
             if (event.key == rdm.charAt(j)) {
                 underArr[j] = rdm.charAt(j);
+                document.getElementById('audio1').play();
             }
         }
 
@@ -61,11 +70,13 @@ let obj = {
         console.log(andArr);
         let equalityFunction = function () {
             if (andArr == rdm.split("").join(" ")) {
+                wins++;
                 document.getElementById("congratulate").innerHTML = "Well done! Press enter to Play again.";
                 document.getElementById("wins").innerHTML = "Wins: " + wins;
                 document.getElementById("video").innerHTML = musicalBands[rdm];
                 document.getElementById("video").style.width = "100%";
                 document.getElementById("pic").style.width = "1px";
+                document.getElementById('audio').play();
                 underArr = [];
                 rdm = bands[Math.floor(Math.random() * bands.length)]
                 swtc = false;
