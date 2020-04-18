@@ -2,11 +2,51 @@ body {
     background: url("../images/hangman_background.jpg")no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
-    -ms-background-size: cover;
+    background-size: cover;
     -o-background-size: cover;
     color: white;
+    font-family: 'Amatic SC', cursive;
 }
-
+#hangMan {
+    opacity: 0.3;
+    display: block;
+    margin: 0 auto;
+}
 #bandName {
     white-space: pre;
+}
+.presentation {
+    margin: 0 auto;
+}
+h1 {
+    font-family: 'Amatic SC', cursive;
+    opacity: 0.5;
+    font-size: 15vw;
+}
+
+h1:hover {
+    transform: scale(1.01);
+}
+.main {
+    margin: 0;
+    padding: 0;
+
+}
+div {
+    padding: 0;
+}
+.mainContent {
+    position: relative;
+    visibility: hidden;
+    width: 1px;
+}
+.supra {
+    font-size: xx-large;
+}
+#video {
+width: 1px;
+}
+#pic {
+    padding: 0;
+    opacity: 0.7;
 }

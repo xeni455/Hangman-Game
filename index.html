@@ -1,23 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="assets/javascript/game_object.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <div class="bg">
-    <p id="bandName"></p>
-    <p id="congratulate"></p>
-    <span id="counter"></span>
-    <span id="wins"></span>
-    <div id="video"></div>
-</div>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <div class="container justify-content-center supra">
+        <div class="container main">
+            <div class="container justify-content-center">
+                <img id="hangMan" src="assets/images/hangman_title.jpg" alt="hangman" class="img-fluid" alt="Responsive image">
+            </div>
+
+            <div class="container text-center col-12 justify-content-center" id="presentation">
+                <h1>Press Enter to begin</h1>
+            </div>
+        </div>
+        <div class="container row mainContent justify-content-center" id="mainContent">
+            <div class="container col-xs-12 col-md-6 text-center align-middle border border-light secondMain">
+                <div class="col-xs-12 congratulate">
+                    <p id="congratulate"></p>
+                </div>
+                <div class="col-xs-12 bandName">
+                    <p id="bandName"></p>
+                </div>
+                <div class="col-xs-12 counter">
+                    <p id="counter"></p>
+                </div>
+                <div class="col-xs-12 wins">
+                    <p id="wins"></p>
+                </div>
+            </div>
+            <div class="container col-xs-12 col-md-6 vid  border border-light  text-center">
+                <div class="container"  id="pic">
+                    <img  src="assets/images/questionMark.jpg" class="img-fluid" alt="Responsive image">
+                </div>
+                <div class="embed-responsive embed-responsive-1by1" id="video"></div>
+
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
 </body>
+
 </html>

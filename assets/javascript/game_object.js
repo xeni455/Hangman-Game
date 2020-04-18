@@ -37,6 +37,13 @@ let obj = {
         document.getElementById("counter").innerHTML = "You still have: " + counter + " chances left.";
         document.getElementById("congratulate").innerHTML = "Good Luck.";
         document.getElementById("wins").innerHTML = "Wins: " + wins;
+        document.getElementById("presentation").style.display = "none";
+        document.getElementById("mainContent").style.visibility = "visible";
+        document.getElementById("mainContent").style.width = "100%";
+        document.getElementById("video").style.width = "1px";
+        document.getElementById("pic").style.width = "100%";
+
+
     },
     playFunction() {
 
@@ -57,6 +64,8 @@ let obj = {
                 document.getElementById("congratulate").innerHTML = "Well done! Press enter to Play again.";
                 document.getElementById("wins").innerHTML = "Wins: " + wins;
                 document.getElementById("video").innerHTML = musicalBands[rdm];
+                document.getElementById("video").style.width = "100%";
+                document.getElementById("pic").style.width = "1px";
                 underArr = [];
                 rdm = bands[Math.floor(Math.random() * bands.length)]
                 swtc = false;
